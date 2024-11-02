@@ -1,29 +1,49 @@
 body{
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #dcd3d3;
 }
 form{
-    margin-bottom: 20px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    text-align: center;
+}
+form table {
+    border: none;
+    width: fit-content;
+}
+form table td {
+    border: none;
+    text-align: left;
 }
 label{
     display: block;
-    margin: 5px, 0;
 }
 input{
     padding: 5px;
-    margin: 5px, 0;
+    margin: 5px 0;
+    background: transparent;
+    font-size: 18px;
+    letter-spacing: 1px;
 }
 button{
-    padding 10px 15px;
-    margin-top: 10px;
+    padding: 10px 15px;
 }
 table{
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    font-size: 18px;
 }
 th, td{
     padding: 10px;
     border: 1px solid #ccc;
-    text-align: left;
+    text-align: center;
 }

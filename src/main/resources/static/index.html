@@ -10,27 +10,66 @@
         Employee Management System
     </h1>
     <form id="employee-form">
-        <input type="hidden" id="employeeId">
-
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required>
-
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required>
-
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" required>
-
-        <label for="salery">Salery:</label>
-        <input type="text" id="salery" name="salery" required>
-
-        <label for="department">Department:</label>
-        <input type="text" id="department" name="department" required>
-
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" required>
-
-        <button type="submit">Add Employee</button>
+        <table class="em-form">
+            <tr>
+                <td>
+                    <input type="hidden" id="employeeId">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="firstName">First Name</label>
+                </td>
+                <td>
+                    <input type="text" id="firstName" name="firstName" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lastName">Last Name</label>
+                </td>
+                <td>
+                    <input type="text" id="lastName" name="lastName" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email</label>
+                </td>
+                <td>
+                    <input type="text" id="email" name="email" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="salery">Salery</label>
+                </td>
+                <td>
+                    <input type="text" id="salery" name="salery" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="department">Department</label>
+                </td>
+                <td>
+                    <input type="text" id="department" name="department" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="address">Address</label>
+                </td>
+                <td>
+                    <input type="text" id="address" name="address" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Add Employee</button>
+                </td>
+            </tr>
+        </table>
     </form>
     <table id="employee-table">
         <thead>
