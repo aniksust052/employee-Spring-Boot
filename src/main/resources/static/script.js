@@ -87,13 +87,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
 
     async function updateEmployee(id, employee){
-    await fetch(`/api/employees/${id}`, {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(employee)
-    });
+        await fetch(`/api/employees/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(employee)
+        });
     }
 
     async function getEmployee(id){
