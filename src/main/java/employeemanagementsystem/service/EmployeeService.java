@@ -15,8 +15,8 @@ public class EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    public List<Employee> getAllEmployee () {
-        return employeeRepository.findAll();
+    public List<Employee> getAllEmployee (String ownerEmail) {
+        return employeeRepository.findAByOwnerEmail(ownerEmail);
     }
 
     public Optional< Employee > getEmployeeById ( Long id ) {
