@@ -3,6 +3,7 @@ package employeemanagementsystem.controller;
 import employeemanagementsystem.model.Employee;
 import employeemanagementsystem.service.EmployeeService;
 import employeemanagementsystem.service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -36,7 +37,7 @@ public class EmployeeController {
     }
 
     @PostMapping
-    public Employee createEmployee(@RequestBody Employee employee, @AuthenticationPrincipal UserDetails userDetails) {
+    public Employee createEmployee(@Valid @RequestBody Employee employee, @AuthenticationPrincipal UserDetails userDetails) {
         Random rand = new Random();
         long randomNumber = 1000000000L + (long) (rand.nextDouble() * 9000000000L);
 
