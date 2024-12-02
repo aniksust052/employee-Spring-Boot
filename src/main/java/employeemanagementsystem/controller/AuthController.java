@@ -5,6 +5,7 @@ import employeemanagementsystem.service.UserService;
 import employeemanagementsystem.dto.LoginRequest;
 import employeemanagementsystem.dto.SignUpRequest;
 import employeemanagementsystem.model.User;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
@@ -23,13 +24,13 @@ public class AuthController {
     private UserService userService;
 
     @PostMapping("/login")
-    public ResponseEntity<ResponseDto> login (@RequestBody LoginRequest request) {
+    public ResponseEntity<ResponseDto> login (@Valid @RequestBody LoginRequest request) {
         return ResponseEntity.ok(userService.login(request));
     }
 
 
     @PostMapping("/register")
-    public ResponseEntity<String> register (@RequestBody SignUpRequest request) {
+    public ResponseEntity<String> register (@Valid @RequestBody SignUpRequest request) {
         Optional<User> admin = Optional.ofNullable(userService.registerUser(request));
         if (admin.isPresent() && admin.get().getId() > 0) {
             return ResponseEntity.ok("Admin registration successful");
@@ -54,7 +55,7 @@ public class AuthController {
     }
 
     @PostMapping("/refresh")
-    public ResponseEntity<ResponseDto> refresh (@RequestBody ResponseDto responseDto) {
+    public ResponseEntity<ResponseDto> refresh (@Valid @RequestBody ResponseDto responseDto) {
         return ResponseEntity.ok(userService.refreshToken(responseDto));
     }
 

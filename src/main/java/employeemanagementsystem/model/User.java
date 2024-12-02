@@ -1,6 +1,8 @@
 package employeemanagementsystem.model;
 
+import employeemanagementsystem.annotations.ValidPassword;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -25,9 +27,11 @@ public class User implements UserDetails {
     private Long id;
 
     @Column(unique = true, nullable = false)
+    @Email(message = "Email should be valid")
     private String email;
 
     @Column(nullable = false)
+//    @ValidPassword
     private String password;
 
     @Enumerated(EnumType.STRING)
